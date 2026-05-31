@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Search History</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔎 Search History</h1>
+
+{% if history %}
+
+{% for item in history %}
+
+<div class="card">
+
+<h3>{{ item['keyword'] }}</h3>
+
+<p>
+
+{{ item['search_date'] }}
+
+</p>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<div class="no-results">
+
+<h2>No Search History</h2>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Admin Dashboard</h1>
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>{{ users }}</h2>
+<p>Users</p>
+</div>
+
+<div class="stat-box">
+<h2>{{ jobs }}</h2>
+<p>Jobs</p>
+</div>
+
+<div class="stat-box">
+<h2>{{ favorites }}</h2>
+<p>Favorites</p>
+</div>
+
+<div class="stat-box">
+<h2>{{ searches }}</h2>
+<p>Searches</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
